@@ -1,5 +1,3 @@
-from string import Template
-
 var1 = 5
 var2 = 8.0
 
@@ -58,6 +56,7 @@ print('\n')
 print(f'Hello, my name is {name}! I am {age} years old.')
 # prints today's date with the help of datetime lib
 import datetime
+
 today = datetime.datetime.today()
 print(f'{today:%B, %d, %Y}')
 print(f'No backslash can be used in f-str expression.')
@@ -69,6 +68,8 @@ print('\n')
 # 2) safe_substitute(mapping, **kwds) - similar to the first one but doesn't throw KeyError is a key is missing
 # 'template' can be used to retrieve Template, e.x. print(template_2.template)
 # '$$' to use the dollar symbol in your template
+from string import Template
+
 template_var = 'Greenford'
 template = Template('I am sitting in $cafe and learning $programming_language.')
 print(template.substitute({'cafe': template_var, 'programming_language': 'Python'}))
