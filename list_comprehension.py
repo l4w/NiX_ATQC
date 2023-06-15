@@ -24,5 +24,6 @@ print('\n')
 
 # 5
 # TODO: discuss the task with the mentor
+# all() func that checks that every element inside is True
 task_5_l2 = [i for i in range(120) if all(i % int(digit) == 0 for digit in str(i) if digit != '0')]
 print(task_5_l2)
