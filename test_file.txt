@@ -1,0 +1,4 @@
+Bitcoin price is 24988 dollars, Ethereum price is 1641 dollars!
+I wish I had 1000 Bitcoins and 2000 Ethereum!
+I am using the context manager!
+The second try.
