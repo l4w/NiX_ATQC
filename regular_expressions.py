@@ -54,7 +54,7 @@ general_var = 'An Internet Protocol address (IP address) is a numerical label su
               'the IP address, was standardized in 1998.[3][4][5] IPv6 deployment has been ongoing since the mid-2000s.'
 
 # 1
-all_digits = re.findall('', general_var)
+all_digits = re.findall('\d', general_var)
 print(all_digits)
 print('\n')
 
@@ -64,6 +64,7 @@ print(all_ips)
 print('\n')
 
 # 3
+# TODO: investigate how to remove '128 bits'
 mention_to_strip = '128 bits.*'
 search_for_mention = re.search(mention_to_strip, general_var)
 # re.MatchObject.group(<index of a group>) method returns the complete matched subgroup by default or
