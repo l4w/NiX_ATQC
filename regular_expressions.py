@@ -90,3 +90,36 @@ with open('regular_expressions.txt', 'r') as file:
     for i in ex5_pattern_to_delete:
         updated_read_file = re.sub(i, '', updated_read_file)
     print(updated_read_file)
+print('\n')
+
+# PRACTICING
+# option + enter -> check RegEx to play with RegEx
+tr_pattern = re.compile('^[A-Z\s]+$')  # at least one uppercase character should be in a string,
+# the string should start and end with the uppercase character, spaces are allowed (\s)
+print(tr_pattern.search('naruto'))
+print(tr_pattern.search('NARUTO'))
+print(tr_pattern.search('NARUTO UZUMAKI'))
+print('\n')
+# pattern in which is expected: 1-3 lower case letters, 3-5 digits, one special character (not an upper, lower case
+# characters, not a number), and OPTIONALLY up to 2 upper case letters
+tr_pattern_second = re.compile('^[a-z]{3}\d{3,5}[^a-zA-Z0-9]{1}[A-Z]{0,2}$')
+print(tr_pattern_second.search('aqu1337#QQ'))
+print(tr_pattern_second.search('hgg19997@'))
+print(tr_pattern_second.search('Ggg19997@A'))
+print('\n')
+# pattern in which no matter what a string consists of it has to has a length of 10 characters
+tr_pattern_third = re.compile('^.{10}$')  # to make regex take the actual dot we should use '\.'
+print(tr_pattern_third.search('12345678 0'))
+print(tr_pattern_third.search('qwertyuiop'))
+print(tr_pattern_third.search('qwe!@#123d'))
+print(tr_pattern_third.search('qwe!@#123d11'))
+print('\n')
+# pattern that can take emails: upper, lower case characters, digits, '.', '-', '_', followed by exactly one '@',
+# followed by any numbers of upper, lower case characters, digits, followed by exactly one dot, followed by 2-3
+# upper, lower case characters, digits
+tr_pattern_fourth = re.compile('^[a-zA-Z0-9\.\-_ ]+@{1}[a-zA-Z0-9]+\.{1}[a-zA-Z]{2,3}$')
+# dot has to be escaped, dash has to be escaped, underscore doesnt
+print(tr_pattern_fourth.search('lawzdan@gmail.com'))
+print(tr_pattern_fourth.search('uzumakinarik95@yahoo.io'))
+print(tr_pattern_fourth.search('d.d.romashkin@khai.edu'))
+print(tr_pattern_fourth.search('d.d.romashkin@khai.c'))
