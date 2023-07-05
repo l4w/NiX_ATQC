@@ -13,9 +13,10 @@ print('\n')
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 is_odd = lambda x: x % 2 != 0
 results = [is_odd(num) for num in numbers]
-# zip(<iterable parameters>) creates list
+# zip(<iterable parameters>) creates list, makes a tuple matching same index elements from iterable objects in its
+# parameters
 for num, result in zip(numbers, results):
-    print(f"Number {num}: {not result}")
+    print(f"Number {num}: {result}")
 print('\n')
 
 # 3
@@ -28,7 +29,8 @@ print(lambda_datetime(var_one))
 print('\n')
 
 # 4
-# map(<func/lamb>, <iterable object>)
+# map(<func/lamb>, <iterable object>) Returns a list of the results after applying the given function
+# to each item of a given iterable (list, tuple etc.)
 
 print(list(map(lambda x: x * 2, numbers)))
 print('\n')

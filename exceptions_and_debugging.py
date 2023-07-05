@@ -13,7 +13,7 @@ finally:
 # 2
 # super() function that is used to give access to the methods of a parent class. it returns a temp object of the
 # parent class when used
-# custom exeption are usually used paying attention to its name
+# custom exceptions are usually used paying attention to its name
 class CustomException(Exception):
     def __init__(self, message, condition):
         super().__init__(message)
