@@ -43,6 +43,7 @@ print(dict_one.items())  # Print all items of dictionary.
 print('\n')
 
 # 4
+# tuple with one element is not a tuple, its type will be equal to the type of that one element
 my_tuple = ('apple', 42, 3.14, True, [1, 2, 3], '', None, ('a', 'b'), 'android', -10)
 print(my_tuple)
 print(my_tuple[-4:])  # Print last 4 items.
@@ -55,3 +56,4 @@ print(joined_tuple)  # Create another tuple, join both tuples and print result.
 x, y, z, *other = joined_tuple
 print(x, y, z, other)
 print(joined_tuple)
+print('\n')
